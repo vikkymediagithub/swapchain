@@ -269,43 +269,33 @@
      
       <div class="flex flex-col flex-1 w-full">
         <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
-          <div class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300">
-            <!-- Left Side: Logo and Links -->
-            <div class="flex items-center justify-between w-full md:w-auto">
-              <!-- Mobile View: Only show logo -->
-              <div class="md:hidden flex items-center justify-start">
-                <img src="/mobile-dashboard/assets/img/logo.png" alt="Logo" class="w-16 h-16" />
-              </div>
-        
-              <!-- Desktop View: Links -->
-              <div class="hidden md:flex gap-20 flex-grow justify-start">
-                <a href="#" class="text-lg text-[#151515] dark:text-gray-200">Operations</a>
-                <a href="#" class="text-lg text-[#151515] dark:text-gray-200">Exchange Order</a>
+          <div class="container flex items-center justify-between h-full px-2 sm:px-4 mx-auto text-purple-600 dark:text-purple-300">
+            <!-- Left Side: Logo -->
+            <div class="flex items-center w-full justify-between md:w-auto">
+              <!-- Mobile View: Logo -->
+              <div class="flex items-center justify-center py-2 w-32 sm:w-36 md:w-40 lg:w-44 xl:w-48">
+                <a href="/index.html">
+                  <img 
+                  src="/mobile-dashboard/assets/img/logo.png" 
+                  alt="Logo" 
+                  class="w-full h-auto object-contain"
+                />
+                </a>
               </div>
             </div>
         
-            <!-- Right Side: Deposit, OTC, Dark Mode, Profile -->
-            <ul class="flex items-center flex-shrink-0 space-x-6">
-              <!-- Desktop View: Deposit and OTC Buttons -->
-              <div class="hidden md:flex items-center space-x-4">
-                <button class="text-lg bg-gray-300 text-[#151515] dark:bg-gray-700 dark:text-gray-200 rounded px-4 py-2">
-                  Deposit
-                </button>
-                <button class="text-lg bg-gray-300 text-[#151515] dark:bg-gray-700 dark:text-gray-200 rounded px-4 py-2">
-                  OTC
-                </button>
-              </div>
-        
+            <!-- Right Side: Buttons, Dark Mode, Profile -->
+            <ul class="flex items-center flex-shrink-0 space-x-5">
               <!-- Dark Mode Toggler -->
               <li class="flex">
                 <button
-                  class="rounded-md focus:outline-none focus:shadow-outline-purple"
+                  class="w-10 h-10 flex items-center justify-center rounded-md focus:outline-none focus:shadow-outline-purple text-xl"
                   @click="toggleTheme"
                   aria-label="Toggle color mode"
                 >
                   <template x-if="!dark">
                     <svg
-                      class="w-8 h-8 text-gray-800 dark:text-gray-200"
+                      class="w-7 h-7 text-gray-800 dark:text-gray-200"
                       aria-hidden="true"
                       fill="currentColor"
                       viewBox="0 0 20 20"
@@ -315,7 +305,7 @@
                   </template>
                   <template x-if="dark">
                     <svg
-                      class="w-8 h-8 text-gray-800 dark:text-gray-200"
+                      class="w-7 h-7 text-gray-800 dark:text-gray-200"
                       aria-hidden="true"
                       fill="currentColor"
                       viewBox="0 0 20 20"
@@ -329,9 +319,8 @@
                   </template>
                 </button>
               </li>
-
         
-              <!-- Profile menu -->
+              <!-- Profile Menu -->
               <li class="relative" x-data="{ isProfileMenuOpen: false }">
                 <button
                   class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none"
@@ -417,12 +406,12 @@
                   </a>
                 </div>
               </li>
-
+        
               <!-- Mobile Menu Button -->
               <li class="md:hidden flex items-center">
                 <button
                   @click="isSideMenuOpen = !isSideMenuOpen"
-                  class="p-1 mr-5 -ml-1 rounded-md focus:outline-none focus:shadow-outline-purple"
+                  class="w-10 h-10 flex items-center justify-center p-2 rounded-md focus:outline-none focus:shadow-outline-purple"
                   aria-label="Menu"
                 >
                   <svg
@@ -439,8 +428,6 @@
                   </svg>
                 </button>
               </li>
-
-
             </ul>
           </div>
         </header>
@@ -456,35 +443,45 @@
           class="fixed inset-0 z-40"
           @click="toggleSideMenu"
         >
-          <!-- Sidebar Content -->
-          <div
-            class="fixed top-0 right-0 w-full bg-white dark:bg-gray-800 h-full shadow-lg z-40"
-            @click.stop
-          >
-            <div class="flex items-center justify-between px-4 py-4 border-b dark:border-gray-700">
-              <img src="/mobile-dashboard/assets/img/logo.png" alt="Logo" class="w-16 h-16" />
-              <button
-                class="text-gray-800 dark:text-gray-200"
-                @click="toggleSideMenu"
-                aria-label="Close Menu"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-
+        <!-- Sidebar Content -->
+        <div
+  class="fixed top-0 right-0 w-full bg-white dark:bg-gray-800 h-full shadow-lg z-40"
+  @click.stop
+>
+  <div class="flex items-center justify-between px-4 py-4 border-b dark:border-gray-700">
+    <!-- Logo: Adjust size for mobile -->
+    <div class="flex items-center justify-center py-2 w-32 sm:w-36 md:w-40 lg:w-44 xl:w-48">
+      <a href="/index.html">
+        <img
+        src="/mobile-dashboard/assets/img/logo.png"
+        alt="Logo"
+        class="w-full h-auto object-contain"
+      />
+      </a>
+    </div>
+    
+    <!-- Close Button -->
+    <button
+      class="text-gray-800 dark:text-gray-200"
+      @click="toggleSideMenu"
+      aria-label="Close Menu"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
+  </div>
             <ul class="mt-6 space-y-4 px-4">
               <!-- Dashboard -->
               <li class="flex items-center space-x-2">
@@ -544,7 +541,7 @@
                 ></path>
               </svg>
               
-                <a href="/" class="text-lg">My Wallet</a>
+                <a href="/mobile-dashboard/my-wallet.html" class="text-lg">My Wallet</a>
               </li>
 
               <!-- Trading Room (Dropdown) -->
@@ -701,81 +698,82 @@
                 <a href="#" class="text-lg text-gray-800 dark:text-gray-200">Logout</a>
               </li>
             </ul>
-          </div>
+        </div>
         </div>
 
-<!-- main -->
-<main class="h-full overflow-y-auto">
-  <div class="container px-4 sm:px-6 mx-auto grid">
-    <div class="lg:col-span-6 col-span-12">
-      <section class="border-l-4 border-gray-700 dark:border-gray-200 p-4 rounded-lg">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-gray-700 dark:text-gray-200">
-          Wallet
-        </h1>
-        <div class="bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-md p-4 rounded-lg">
-          <header class="mb-4">
-            <h2 class="text-lg font-bold text-gray-800 dark:text-gray-200">Fund Wallet</h2>
-          </header>
-          <div>
-            <!-- Success Message -->
-            <h6 class="text-red-600 text-center mb-4">
-              Deposit Initiated Successfully, Kindly Wait for Approval
-            </h6>
 
-            <div class="text-center">
-              <!-- Amount -->
-              <h2 class="text-xl font-semibold mb-4">
-                $333 (0 ETHEREUM (ETH))
-              </h2>
-
-              <!-- QR Code -->
-              <div class="flex justify-center mb-6">
-                <img
-                  class="w-40 h-auto"
-                  src="https://quickchart.io/qr?text=0xfB4c1320A24E3c35d1DfDf62067e59770f0B7373&amp;size=180"
-                  id="bar"
-                  alt="QR Code"
-                />
-              </div>
-
-              <!-- Deal Information -->
-              <ul class="space-y-4">
-                <li class="flex items-center space-x-3">
-                  <i class="fa fa-institution text-gray-800 dark:text-gray-200"></i>
+        <!-- main -->
+        <main class="h-full overflow-y-auto">
+          <div class="container px-4 sm:px-6 mx-auto grid">
+            <div class="lg:col-span-6 col-span-12">
+              <section class="border-l-4 border-gray-700 dark:border-gray-200 p-4 rounded-lg">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-gray-700 dark:text-gray-200">
+                  Wallet
+                </h1>
+                <div class="bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-md p-4 rounded-lg">
+                  <header class="mb-4">
+                    <h2 class="text-lg font-bold text-gray-800 dark:text-gray-200">Fund Wallet</h2>
+                  </header>
                   <div>
-                    <strong>Wallet</strong>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">Payment method</p>
-                  </div>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <i class="fa fa-credit-card text-gray-800 dark:text-gray-200"></i>
-                  <div>
-                    <strong>0xfB4c1320A24E3c35d1DfDf62067e59770f0B7373</strong>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">Wallet Address</p>
-                  </div>
-                </li>
-              </ul>
+                    <!-- Success Message -->
+                    <h6 class="text-red-600 text-center mb-4">
+                      Deposit Initiated Successfully, Kindly Wait for Approval
+                    </h6>
 
-              <!-- Cancel Transaction Button -->
-              <div class="mt-6">
-                <form action="" method="post">
-                  <input type="hidden" value="826" name="remove" />
-                  <button
-                    type="submit"
-                    class="px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-md transition duration-200"
-                    name="out"
-                  >
-                    Cancel Txn
-                  </button>
-                </form>
-              </div>
+                    <div class="text-center">
+                      <!-- Amount -->
+                      <h2 class="text-xl font-semibold mb-4">
+                        $333 (0 ETHEREUM (ETH))
+                      </h2>
+
+                      <!-- QR Code -->
+                      <div class="flex justify-center mb-6">
+                        <img
+                          class="w-40 h-auto"
+                          src="https://quickchart.io/qr?text=0xfB4c1320A24E3c35d1DfDf62067e59770f0B7373&amp;size=180"
+                          id="bar"
+                          alt="QR Code"
+                        />
+                      </div>
+
+                      <!-- Deal Information -->
+                      <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                          <i class="fa fa-institution text-gray-800 dark:text-gray-200"></i>
+                          <div>
+                            <strong>Wallet</strong>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Payment method</p>
+                          </div>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                          <i class="fa fa-credit-card text-gray-800 dark:text-gray-200"></i>
+                          <div>
+                            <strong>0xfB4c1320A24E3c35d1DfDf62067e59770f0B7373</strong>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Wallet Address</p>
+                          </div>
+                        </li>
+                      </ul>
+
+                      <!-- Cancel Transaction Button -->
+                      <div class="mt-6">
+                        <form action="" method="post">
+                          <input type="hidden" value="826" name="remove" />
+                          <button
+                            type="submit"
+                            class="px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-md transition duration-200"
+                            name="out"
+                          >
+                            Cancel Txn
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-  </div>
-</main>
+        </main>
 
 
         
