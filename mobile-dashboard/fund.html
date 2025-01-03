@@ -702,83 +702,84 @@
         </div>
 
 
-        <!-- main -->
-        <main class="h-full overflow-y-auto">
-          <div class="container px-4 sm:px-6 mx-auto grid">
-            <div class="lg:col-span-6 col-span-12">
-              <section class="p-4 rounded-lg">
-                <h1 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-gray-700 dark:text-gray-200 text-center">
-                  Wallet
-                </h1>
-                <div class="bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-md p-4 rounded-lg">
-                  <header class="mb-4">
-                    <h2 class="text-lg font-bold text-gray-800 dark:text-gray-200 text-center">Fund Wallet</h2>
-                  </header>
-                  <div>
-                    <!-- Success Message -->
-                    <h6 class="text-red-600 text-center mb-4">
-                      Deposit Initiated Successfully, Kindly Wait for Approval
-                    </h6>
+<!-- main -->
+<main class="h-full overflow-y-auto">
+  <div class="container mx-auto px-4 sm:px-6">
+    <div class="col-span-12">
+      <section class="p-4 rounded-lg">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-gray-700 dark:text-gray-200">
+          Wallet
+        </h1>
+        <div class="bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-md p-4 rounded-lg">
+          <header class="mb-4 text-center">
+            <h2 class="text-lg font-bold text-gray-800 dark:text-gray-200">Fund Wallet</h2>
+          </header>
+          <div>
+            <!-- Success Message -->
+            <h6 class="text-red-600 text-center mb-4">
+              Deposit Initiated Successfully, Kindly Wait for Approval
+            </h6>
 
-                    <div class="text-center">
-                      <!-- Amount -->
-                      <h2 class="text-xl font-semibold mb-4">
-                        $333 (0 ETHEREUM (ETH))
-                      </h2>
+            <div class="text-center">
+              <!-- Amount -->
+              <h2 class="text-xl font-semibold mb-4">
+                $333 (0 ETHEREUM (ETH))
+              </h2>
 
-                      <!-- QR Code -->
-                      <div class="flex justify-center mb-6">
-                        <img
-                          class="w-40 h-auto"
-                          src="https://quickchart.io/qr?text=0xfB4c1320A24E3c35d1DfDf62067e59770f0B7373&amp;size=180"
-                          id="bar"
-                          alt="QR Code"
-                        />
-                      </div>
+              <!-- QR Code -->
+              <div class="flex justify-center mb-6">
+                <img
+                  class="w-40 h-auto"
+                  src="https://quickchart.io/qr?text=0xfB4c1320A24E3c35d1DfDf62067e59770f0B7373&amp;size=180"
+                  id="bar"
+                  alt="QR Code"
+                />
+              </div>
 
-                      <!-- Deal Information -->
-                      <ul class="space-y-4">
-                        <!-- Wallet Item -->
-                        <li class="flex items-center space-x-4">
-                          <i class="fa fa-institution text-gray-800 dark:text-gray-200 text-2xl"></i>
-                          <div>
-                            <p class="text-base font-semibold">Wallet</p>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Payment method</p>
-                          </div>
-                        </li>
-
-                        <!-- Wallet Address -->
-                        <li class="flex items-center space-x-4">
-                          <i class="fa fa-credit-card text-gray-800 dark:text-gray-200 text-2xl"></i>
-                          <div class="overflow-hidden">
-                            <p class="text-base font-semibold break-words">
-                              0xfB4c1320A24E3c35d1DfDf62067e59770f0B7373
-                            </p>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Wallet Address</p>
-                          </div>
-                        </li>
-                      </ul>
-
-                      <!-- Cancel Transaction Button -->
-                      <div class="mt-6">
-                        <form action="" method="post">
-                          <input type="hidden" value="826" name="remove" />
-                          <button
-                            type="submit"
-                            class="px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-md transition duration-200"
-                            name="out"
-                          >
-                            Cancel Txn
-                          </button>
-                        </form>
-                      </div>
-                    </div>
+              <!-- Deal Information -->
+              <ul class="space-y-4">
+                <!-- Wallet Item -->
+                <li class="flex items-center space-x-3">
+                  <i class="fa fa-institution text-gray-800 dark:text-gray-200 text-xl"></i>
+                  <div class="flex-1">
+                    <p class="text-base font-semibold">Wallet</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Payment method</p>
                   </div>
-                </div>
-              </section>
+                </li>
+
+                <!-- Wallet Address -->
+                <li class="flex items-center space-x-3">
+                  <i class="fa fa-credit-card text-gray-800 dark:text-gray-200 text-xl"></i>
+                  <div class="flex-1">
+                    <p class="text-base font-semibold break-all">
+                      0xfB4c1320A24E3c35d1DfDf62067e59770f0B7373
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Wallet Address</p>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- Cancel Transaction Button -->
+              <div class="mt-6">
+                <form action="" method="post">
+                  <input type="hidden" value="826" name="remove" />
+                  <button
+                    type="submit"
+                    class="px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-md transition duration-200"
+                    name="out"
+                  >
+                    Cancel Txn
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
-        </main>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
 
 
 
