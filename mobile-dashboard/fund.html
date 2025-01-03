@@ -704,92 +704,79 @@
           </div>
         </div>
 
-        <!-- main -->
-        <main class="h-full overflow-y-auto">
-          <div class="container px-6 mx-auto grid">
-            <div class="col-lg-6 col-12">
-                <section class="box has-border-left-3">
-                    <h1 class="text-3xl md:text-4xl font-semibold mb-4 md:mb-0 text-light text-gray-700 dark:text-gray-200">Wallet</h1>
-                  <div class="content-body p-4 bg-gray-300 text-[#151515] dark:bg-gray-700 dark:text-gray-200 shadow rounded-lg">
-                    <header class="panel_header">
-                        <h2 class="title pull-left text-lg font-bold text-gray-800 dark:text-gray-200">Fund Wallet</h2>
-                      </header>
-                    <div class="row">
-                      <div class="col-xs-12">
-                        <div class="transfer-wrapper">
-                          <!-- Success Message -->
-                          <h6 class="text-danger text-center mb-4">
-                            Deposit Initiated Successfully, Kindly Wait for approval
-                          </h6>
-              
-                          <div class="row">
-                            <div class="col-12 mt-4 mb-6">
-                              <h2 class="text-center text-xl font-semibold">
-                                $333 (0 ETHEREUM (ETH))
-                              </h2>
-                            </div>
-              
-                            <div class="clearfix"></div>
-              
-                            <!-- Deal Information -->
-                            <div class="deal-wrapper text-center">
-                              <img
-                                class="w-full h-auto max-w-[180px] mx-auto"
-                                src="https://quickchart.io/qr?text=0xfB4c1320A24E3c35d1DfDf62067e59770f0B7373&amp;size=180"
-                                id="bar"
-                                alt="QR Code"
-                              />
-                              <ul class="dropdown-menu-list list-unstyled mt-4">
-                                <li class="mb-2">
-                                  <div class="notice-icon inline-block mr-2">
-                                    <i class="fa fa-institution"></i>
-                                  </div>
-                                  <div class="inline-block">
-                                    <span class="name text-sm">
-                                      <strong>Wallet</strong>
-                                      <span class="time small">Payment method</span>
-                                    </span>
-                                  </div>
-                                </li>
-                                <li class="mb-2">
-                                  <div class="notice-icon inline-block mr-2">
-                                    <i class="fa fa-credit-card"></i>
-                                  </div>
-                                  <div class="inline-block">
-                                    <span class="name text-sm">
-                                      <strong>0xfB4c1320A24E3c35d1DfDf62067e59770f0B7373</strong>
-                                      <span class="time small">Wallet Address</span>
-                                    </span>
-                                  </div>
-                                </li>
-              
-                                <!-- Cancel Transaction Button -->
-                                <li>
-                                  <form action="" method="post" class="text-center">
-                                    <input type="hidden" value="826" name="remove" />
-                                    <button
-                                      type="submit"
-                                      class="btn btn-primary btn-sm px-4 py-2 mt-4 rounded-md bg-gradient-to-r from-green-500 to-green-700 text-white"
-                                      name="out"
-                                    >
-                                      Cancel Txn
-                                    </button>
-                                  </form>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
+<!-- main -->
+<main class="h-full overflow-y-auto">
+  <div class="container px-4 sm:px-6 mx-auto grid">
+    <div class="lg:col-span-6 col-span-12">
+      <section class="border-l-4 border-gray-700 dark:border-gray-200 p-4 rounded-lg">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-gray-700 dark:text-gray-200">
+          Wallet
+        </h1>
+        <div class="bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-md p-4 rounded-lg">
+          <header class="mb-4">
+            <h2 class="text-lg font-bold text-gray-800 dark:text-gray-200">Fund Wallet</h2>
+          </header>
+          <div>
+            <!-- Success Message -->
+            <h6 class="text-red-600 text-center mb-4">
+              Deposit Initiated Successfully, Kindly Wait for Approval
+            </h6>
+
+            <div class="text-center">
+              <!-- Amount -->
+              <h2 class="text-xl font-semibold mb-4">
+                $333 (0 ETHEREUM (ETH))
+              </h2>
+
+              <!-- QR Code -->
+              <div class="flex justify-center mb-6">
+                <img
+                  class="w-40 h-auto"
+                  src="https://quickchart.io/qr?text=0xfB4c1320A24E3c35d1DfDf62067e59770f0B7373&amp;size=180"
+                  id="bar"
+                  alt="QR Code"
+                />
               </div>
-              
-              
-              
+
+              <!-- Deal Information -->
+              <ul class="space-y-4">
+                <li class="flex items-center space-x-3">
+                  <i class="fa fa-institution text-gray-800 dark:text-gray-200"></i>
+                  <div>
+                    <strong>Wallet</strong>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Payment method</p>
+                  </div>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="fa fa-credit-card text-gray-800 dark:text-gray-200"></i>
+                  <div>
+                    <strong>0xfB4c1320A24E3c35d1DfDf62067e59770f0B7373</strong>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Wallet Address</p>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- Cancel Transaction Button -->
+              <div class="mt-6">
+                <form action="" method="post">
+                  <input type="hidden" value="826" name="remove" />
+                  <button
+                    type="submit"
+                    class="px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-md transition duration-200"
+                    name="out"
+                  >
+                    Cancel Txn
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
-        </main>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
 
         
       </div>
